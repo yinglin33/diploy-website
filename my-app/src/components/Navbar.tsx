@@ -7,7 +7,7 @@ const Navbar = () => {
       <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
       <BootstrapNavbar.Collapse id="basic-navbar-nav">
         <Nav className="ms-auto">
-        <Nav.Link href="mailto:yinglin7256@gmail.com">Contact Us</Nav.Link>
+        <Nav.Link href="mailto:sales@diploy.io">Contact Us</Nav.Link>
         </Nav>
       </BootstrapNavbar.Collapse>
     </BootstrapNavbar>

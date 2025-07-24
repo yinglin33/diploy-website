@@ -9,7 +9,7 @@ const Home: React.FC = () => {
         <Container className="text-center">
           <h1 className="display-4 fw-bold text-primary mb-4">Welcome to Diploy</h1>
           <p className="fs-5 text-muted mb-4 mx-auto" style={{ maxWidth: '750px', lineHeight: '1.6' }}>
-            Diploy helps field service and labor-based businesses run smoother — from scheduling and dispatching to AI-powered team management.
+            We help field service and labor-based businesses run smoother — from scheduling and dispatching to AI-powered team management.
           </p>
           <Button variant="primary" size="lg" href="#contact">
             Get in Touch
@@ -42,10 +42,10 @@ const Home: React.FC = () => {
                   <Card.Title className="text-primary fs-4 mb-3">Email</Card.Title>
                   <Card.Text className="fs-5">
                     <a
-                      href="mailto:yinglin7256@gmail.com"
+                      href="mailto:sales@diploy.io"
                       className="text-decoration-none text-dark"
                     >
-                      yinglin7256@gmail.com
+                      sales@diploy.io
                     </a>
                   </Card.Text>
                 </Card.Body>
