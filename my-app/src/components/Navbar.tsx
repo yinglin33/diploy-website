@@ -1,5 +1,4 @@
-import React from 'react';
-import { Navbar as BootstrapNavbar, Container, Nav } from 'react-bootstrap';
+import { Navbar as BootstrapNavbar, Nav } from 'react-bootstrap';
 
 const Navbar = () => {
   return (
