@@ -1,0 +1,18 @@
+import React from 'react';
+import { Navbar as BootstrapNavbar, Container, Nav } from 'react-bootstrap';
+
+const Navbar = () => {
+  return (
+    <BootstrapNavbar bg="dark" variant="dark" expand="lg" sticky="top" className="w-100 px-4">
+      <BootstrapNavbar.Brand href="#home">Diploy</BootstrapNavbar.Brand>
+      <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
+      <BootstrapNavbar.Collapse id="basic-navbar-nav">
+        <Nav className="ms-auto">
+        <Nav.Link href="mailto:yinglin7256@gmail.com">Contact Us</Nav.Link>
+        </Nav>
+      </BootstrapNavbar.Collapse>
+    </BootstrapNavbar>
+  );
+};
+
+export default Navbar;
