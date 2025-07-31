@@ -36,21 +36,25 @@ const Home: React.FC = () => {
       </section>
 
       {/* BOOK A DEMO SECTION */}
-      <section className="py-5 border-bottom">
-        <Container className="text-center">
-          <h2 className="h3 fw-semibold text-secondary mb-4">Ready to See Diploy in Action?</h2>
+      <section className="py-5 border-bottom" style={{ minHeight: '500px', paddingTop: '80px', paddingBottom: '80px' }}>
+        <Container className="text-center d-flex flex-column justify-content-center" style={{ minHeight: '400px' }}>
+          <h2 className="display-5 fw-bold text-secondary mb-4">Ready to See Diploy in Action?</h2>
           <p className="fs-5 text-muted mb-4 mx-auto" style={{ maxWidth: '700px', lineHeight: '1.6' }}>
             Schedule a personalized demo to see how Diploy can streamline your frontline operations and help your business run smoother.
           </p>
-          <Button 
-            variant="primary" 
-            size="lg" 
-            href="https://calendly.com/yinglonglin/diploy-product-demo"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Book a Demo
-          </Button>
+          <div className="d-flex justify-content-center">
+            <Button 
+              variant="primary" 
+              size="lg" 
+              href="https://calendly.com/yinglonglin/diploy-product-demo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-5 py-3 fs-5"
+              style={{ width: '220px' }}
+            >
+              Book a Demo
+            </Button>
+          </div>
         </Container>
       </section>
 
