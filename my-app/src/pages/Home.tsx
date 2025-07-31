@@ -5,13 +5,17 @@ const Home: React.FC = () => {
   return (
     <div style={{ backgroundColor: '#f8f9fa' }}>
       {/* HERO SECTION */}
-      <section className="py-5 border-bottom">
+      <section className="d-flex align-items-center justify-content-center" style={{ 
+        minHeight: '100vh', 
+        background: 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)',
+        position: 'relative'
+      }}>
         <Container className="text-center">
-          <h1 className="display-4 fw-bold text-primary mb-4">Welcome to Diploy</h1>
-          <p className="fs-5 text-muted mb-4 mx-auto" style={{ maxWidth: '750px', lineHeight: '1.6' }}>
+          <h1 className="display-3 fw-bold text-primary mb-4">Welcome to Diploy</h1>
+          <p className="fs-4 text-muted mb-5 mx-auto" style={{ maxWidth: '800px', lineHeight: '1.8' }}>
             We help field service and labor-based businesses run smoother — from scheduling and dispatching to AI-powered team management.
           </p>
-          <Button variant="primary" size="lg" href="#contact">
+          <Button variant="primary" size="lg" href="#contact" className="px-5 py-3 fs-5">
             Get in Touch
           </Button>
         </Container>
