@@ -1,0 +1,91 @@
+/* Home Page Styles */
+
+/* Main container */
+.home-container {
+  background-color: #f8f9fa;
+}
+
+/* Hero Section */
+.hero-section {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  position: relative;
+}
+
+.hero-description {
+  max-width: 800px;
+  line-height: 1.8;
+}
+
+/* About Section */
+.about-section {
+  min-height: 500px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.about-container {
+  min-height: 400px;
+}
+
+.about-text {
+  line-height: 1.7;
+}
+
+/* Demo Section */
+.demo-section {
+  min-height: 500px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.demo-container {
+  min-height: 400px;
+}
+
+.demo-description {
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+.demo-button {
+  width: 220px;
+}
+
+/* Contact Section */
+.contact-section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: white;
+}
+
+.contact-section .container {
+  max-width: 100%;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.contact-textarea {
+  resize: vertical;
+}
+
+.contact-submit-button {
+  min-width: 200px;
+}
+
+/* Contact form placeholder styling */
+.form-control::placeholder {
+  color: #6c757d !important;
+  opacity: 0.6;
+}
+
+.form-control:focus::placeholder {
+  color: #6c757d !important;
+  opacity: 0.4;
+}
+
+/* Contact form label alignment */
+.contact-section .form-label {
+  text-align: left !important;
+  display: block !important;
+} 
