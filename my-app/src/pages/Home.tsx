@@ -22,16 +22,16 @@ const Home: React.FC = () => {
       </section>
 
       {/* ABOUT SECTION */}
-      <section className="py-5 border-bottom bg-white">
-        <Container className="text-center">
-          <h2 className="h3 fw-semibold text-secondary mb-4">Why Diploy?</h2>
-          <p className="fs-5 mb-3 mx-auto" style={{ maxWidth: '800px', lineHeight: '1.7' }}>
+      <section className="py-5 border-bottom bg-white" style={{ minHeight: '500px', paddingTop: '80px', paddingBottom: '80px' }}>
+        <Container className="text-start d-flex flex-column justify-content-center" style={{ minHeight: '400px' }}>
+          <h2 className="display-5 fw-bold text-secondary mb-4 text-start">Why Diploy?</h2>
+          <p className="fs-5 mb-3 text-start" style={{ lineHeight: '1.7' }}>
             Diploy is a modular workspace and frontline team management system. It's designed for small businesses who are tired of juggling text threads, spreadsheets, or overpriced software. With Diploy, you can build your own setup — like Notion, but optimized for dispatching, team coordination, and customer management.
           </p>
-          <p className="fs-5 text-muted mx-auto" style={{ maxWidth: '800px', lineHeight: '1.7' }}>
+          <p className="fs-5 text-muted mb-4 text-start" style={{ lineHeight: '1.7' }}>
             Use just what you need. Pay for just what you use. Scale confidently.
           </p>
-          <p className="text-muted fst-italic mt-3">Version 1.0: Workspace & Frontline Team Management System</p>
+          <p className="text-muted fst-italic mb-0 text-start">Version 1.0: Workspace & Frontline Team Management System</p>
         </Container>
       </section>
 
