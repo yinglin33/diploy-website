@@ -38,7 +38,7 @@ const Home: React.FC = () => {
                             WebkitTextFillColor: "transparent",
                         }}
                     >
-                        No More Worries About
+                        Wave Goodbye to
                     </h1>
 
                     {/* Rotating subheadline */}
