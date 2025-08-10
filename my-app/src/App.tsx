@@ -4,17 +4,14 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 
 function App() {
-
   return (
-    <>
-      <div>
-        <Navbar />
-        <main>
-        <Home/>
-        </main>
-        <Footer />
-      </div>
-    </>
+    <div className="app">
+      <Navbar />
+      <main className="main">
+        <Home />
+      </main>
+      <Footer />
+    </div>
   )
 }
 

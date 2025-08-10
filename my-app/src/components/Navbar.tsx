@@ -1,18 +1,40 @@
-import { Navbar as BootstrapNavbar, Nav } from 'react-bootstrap';
+import React, { useState } from "react"
 
 const Navbar = () => {
-  return (
-    <BootstrapNavbar bg="dark" variant="dark" expand="lg" sticky="top" className="w-100 px-4">
-      <BootstrapNavbar.Brand href="#home">Diploy</BootstrapNavbar.Brand>
-      <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
-      <BootstrapNavbar.Collapse id="basic-navbar-nav">
-        <Nav className="ms-auto">
-        <Nav.Link href="https://calendly.com/yinglonglin/diploy-product-demo">Book a Demo</Nav.Link>
-        <Nav.Link href="mailto:sales@diploy.io">Contact Us</Nav.Link>
-        </Nav>
-      </BootstrapNavbar.Collapse>
-    </BootstrapNavbar>
-  );
-};
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-export default Navbar;
+    return (
+        <nav className="navbar">
+            <div className="container navbar-container">
+                <div className="navbar-brand">
+                    <a href="#home" className="brand-link">
+                        <span className="brand-text">Diploy</span>
+                    </a>
+                </div>
+
+                <div className={`navbar-menu ${isMenuOpen ? "is-open" : ""}`}>
+                    <a
+                        href="https://calendly.com/yinglonglin/diploy-product-demo"
+                        className="nav-link"
+                    >
+                        Book a Demo
+                    </a>
+                    <a href="mailto:sales@diploy.io" className="nav-link">
+                        Contact
+                    </a>
+                </div>
+
+                <button
+                    className={`navbar-toggle ${isMenuOpen ? "is-open" : ""}`}
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    aria-label="Toggle navigation"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    )
+}
+export default Navbar
