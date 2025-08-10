@@ -1,18 +1,81 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Row, Col, Card, Button, Container } from 'react-bootstrap';
+import { AnimatePresence, motion } from "framer-motion";
+import Logo from '../assets/logo.png';
 
 const Home: React.FC = () => {
+  const headlines = [
+    "Missed Tasks and Miscommunication",
+    "Bulky, Overpriced Software",
+    "Endless Onboarding and Training",
+    "Field Teams Falling Out of Sync",
+    "Switching Between Ten Different Apps",
+    "Paying for Features You Don’t Use"
+  ];
+
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % headlines.length);
+    }, 3500); // 3s per headline
+    return () => clearInterval(interval);
+  }, []);
   return (
-    <div style={{ backgroundColor: '#f8f9fa' }}>
+    <div style={{ backgroundColor: '#f8f9fa', paddingTop: '4rem' }}>
       {/* HERO SECTION */}
       <section className="py-5 border-bottom">
         <Container className="text-center">
-          <h1 className="display-4 fw-bold text-primary mb-4">Welcome to Diploy</h1>
-          <p className="fs-5 text-muted mb-4 mx-auto" style={{ maxWidth: '750px', lineHeight: '1.6' }}>
-            We help field service and labor-based businesses run smoother — from scheduling and dispatching to AI-powered team management.
-          </p>
-          <Button variant="primary" size="lg" href="#contact">
-            Get in Touch
+      {/* Fixed headline */}
+      <h1
+        className="fw-bold mb-4"
+        style={{
+          fontSize: "clamp(2.5rem, 5vw, 4rem)", // responsive
+          letterSpacing: "-1px",
+          background: "linear-gradient(90deg, #007bff, #00c4ff)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent"
+        }}
+      >
+        No More Worries About
+      </h1>
+
+      {/* Rotating subheadline */}
+      <div style={{ height: "3.5rem", overflow: "hidden" }}>
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={headlines[index]}
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -40 }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+            className="fw-semibold text-secondary"
+            style={{
+              fontSize: "clamp(1.5rem, 3vw, 2.2rem)",
+              lineHeight: "1.2"
+            }}
+          >
+            {headlines[index]}
+          </motion.div>
+        </AnimatePresence>
+      </div>
+
+      {/* Logo and description */}
+      <p
+        style={{
+          fontSize: "clamp(1.1rem, 2vw, 1.4rem)",
+          color: "#6c757d",
+          maxWidth: "750px",
+          margin: "1.5rem auto 0 auto",
+          lineHeight: "1.6"
+        }}
+      >
+        Diploy: <b> Your Copilot for Field Service Management </b> — from scheduling to
+        AI-powered team management.
+      </p>
+      
+          <Button variant="primary" size="lg" href="#contact" style = {{ marginTop: '2rem' }}>
+            Book a Demo
           </Button>
         </Container>
       </section>
@@ -20,9 +83,9 @@ const Home: React.FC = () => {
       {/* ABOUT SECTION */}
       <section className="py-5 border-bottom bg-white">
         <Container className="text-center">
-          <h2 className="h3 fw-semibold text-secondary mb-4">Why Diploy?</h2>
+          <img src = {Logo} alt="Diploy Logo" className="img-fluid my-4" style={{ maxWidth: '200px' }} />
           <p className="fs-5 mb-3 mx-auto" style={{ maxWidth: '800px', lineHeight: '1.7' }}>
-            Diploy is a modular workspace and frontline team management system. It's designed for small businesses who are tired of juggling text threads, spreadsheets, or overpriced software. With Diploy, you can build your own setup — like Notion, but optimized for dispatching, team coordination, and customer management.
+Diploy is an AI native, in-one workspace and field service management platform designed for small businesses tired of juggling text threads, spreadsheets, or costly software. With Diploy, you get smart scheduling, AI-powered quoting, automated dispatching, and lead generation — all built into one easy-to-use system optimized for your team and customers.
           </p>
           <p className="fs-5 text-muted mx-auto" style={{ maxWidth: '800px', lineHeight: '1.7' }}>
             Use just what you need. Pay for just what you use. Scale confidently.
@@ -30,6 +93,85 @@ const Home: React.FC = () => {
           <p className="text-muted fst-italic mt-3">Version 1.0: Workspace & Frontline Team Management System</p>
         </Container>
       </section>
+
+
+      {/* FEATURE HIGHLIGHT SECTION */}
+      <Container className="py-5">
+      <Row className="align-items-center">
+        {/* Left: Image */}
+        <Col md={6} className="mb-4 mb-md-0">
+          <img
+            src="https://via.placeholder.com/600x400?text=Your+Image+Here"
+            alt="Feature Illustration"
+            style={{ width: "100%", borderRadius: "8px", objectFit: "cover" }}
+          />
+        </Col>
+
+        {/* Right: Header + 3 pointers */}
+        <Col
+          md={6}
+          style={{
+            paddingLeft: "2rem",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "flex-start", // align left
+            // Removed justifyContent to avoid vertical centering
+            gap: "1.8rem",
+          }}
+        >
+          <h2
+            style={{
+              fontSize: "clamp(2rem, 4vw, 2.8rem)",
+              fontWeight: 700,
+              color: "#007bff",
+              marginBottom: 0,
+              textAlign: "left", // explicitly left align heading
+            }}
+          >
+            Streamline Your Field Service Workflow
+          </h2>
+
+          <ul
+            style={{
+              listStyle: "none",
+              paddingLeft: 0,
+              margin: 0,
+              fontSize: "clamp(1.05rem, 1.2vw, 1.3rem)",
+              color: "#333",
+              lineHeight: 1.6,
+            }}
+          >
+            {[
+              "AI-powered scheduling and dispatching to save time",
+              "Automated quoting and lead generation built-in",
+              "Simple, all-in-one platform designed for small & midsize teams",
+            ].map((item, idx) => (
+              <li
+                key={idx}
+                style={{
+                  display: "flex",
+                  alignItems: "flex-start",
+                  marginBottom: idx === 2 ? 0 : "1.25rem",
+                  gap: "0.75rem",
+                }}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="#007bff"
+                  viewBox="0 0 16 16"
+                  style={{ flexShrink: 0, marginTop: "3px" }}
+                >
+                  <path d="M13.485 1.929a.75.75 0 0 1 1.06 1.06L6.97 10.565 3.454 7.05a.75.75 0 1 1 1.06-1.06l2.456 2.455 6.515-6.515z" />
+                </svg>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </Col>
+      </Row>
+    </Container>
 
       {/* BOOK A DEMO SECTION */}
       <section className="py-5 border-bottom">
@@ -51,9 +193,9 @@ const Home: React.FC = () => {
       </section>
 
       {/* CONTACT SECTION */}
-      <section className="py-5 bg-light" id="contact">
-        <Container className="text-center">
-          <h2 className="h3 fw-semibold text-secondary mb-4">Contact Us</h2>
+      <section id="contact">
+        <Container className="text-center" style={{ backgroundColor: "transparent", paddingBottom: "4rem" }}>
+          <h2 className="h3 fw-semibold text-secondary mb-4" style = {{paddingTop: "2rem"}}>Contact Us</h2>
           <Row className="justify-content-center g-4">
             <Col xs={12} md={5}>
               <Card className="h-100 shadow-sm border-0">

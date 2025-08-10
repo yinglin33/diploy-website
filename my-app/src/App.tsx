@@ -9,7 +9,7 @@ function App() {
     <>
       <div>
         <Navbar />
-        <main className="px-4 py-5">
+        <main>
         <Home/>
         </main>
         <Footer />
