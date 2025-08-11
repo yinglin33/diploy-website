@@ -28,13 +28,13 @@ const Home: React.FC = () => {
     return (
         <div style={{ backgroundColor: "#f8f9fa" }}>
             {/* HERO SECTION */}
-            <section
+            <section 
                 className="border-bottom"
                 style={{
                     minHeight: "95vh",
                     display: "flex",
-                    alignItems: "center",
-                    paddingTop: "6rem",
+                    alignItems: "flex-start",
+                    paddingTop: "10rem",
                     paddingBottom: "3rem"
                 }}
             >
@@ -116,12 +116,11 @@ const Home: React.FC = () => {
                         className="fs-5 mb-3 mx-auto"
                         style={{ maxWidth: "800px", lineHeight: "1.7" }}
                     >
-                        Diploy is an AI native, all-in-one workspace and field
-                        service management platform for small
-                        businesses. With Diploy, you get smart
-                        scheduling, AI-powered quoting, automated dispatching,
-                        and lead generation — built into one easy-to-use
-                        system.
+                        Diploy is an AI-native field service
+                        management platform. With Diploy, you get
+                        smart scheduling, AI-powered quoting,
+                        automated dispatching, lead generation, 
+                        and more — in one easy-to-use system.
                     </p>
                     <p
                         className="fs-5 text-muted mx-auto fw-bold"
