@@ -134,36 +134,64 @@ const Home: React.FC = () => {
                 <Row className="align-items-center">
                     {/* Left: Image */}
                     <Col md={6} className="mb-4 mb-md-0">
-                                            <Carousel className="my-4" style={{
-    maxWidth: "1200px",
-    margin: "0 auto",
-    outline: "5px solid #ccc",
-    outlineOffset: "6px",  // pushes border outward
-    borderRadius: "12px"
-  }}
->
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src={jobsImg}
-      alt="First slide"
-    />
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src={customersImg}
-      alt="Second slide"
-    />
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src={quotesImg}
-      alt="Third slide"
-    />
-  </Carousel.Item>
-</Carousel>
+                        <Carousel
+                            className="my-4"
+                            interval={3000}
+                            controls={true}
+                            indicators={true}
+                            pause="hover"
+                            wrap={true}
+                            fade={false}
+                            style={{
+                                maxWidth: "min(1200px, calc(100vw - 3rem))",
+                                margin: "0 auto",
+                                outline: "5px solid #ccc",
+                                outlineOffset: "6px",
+                                borderRadius: "12px",
+                                overflow: "hidden"
+                            }}
+                        >
+                            <Carousel.Item style={{ borderRadius: "12px", overflow: "hidden" }}>
+                                <img
+                                    className="d-block w-100"
+                                    src={jobsImg}
+                                    alt="Jobs management interface"
+                                    style={{
+                                        borderRadius: "12px",
+                                        display: "block",
+                                        objectFit: "cover",
+                                        height: "auto"
+                                    }}
+                                />
+                            </Carousel.Item>
+                            <Carousel.Item style={{ borderRadius: "12px", overflow: "hidden" }}>
+                                <img
+                                    className="d-block w-100"
+                                    src={customersImg}
+                                    alt="Customer management interface"
+                                    style={{
+                                        borderRadius: "12px",
+                                        display: "block",
+                                        objectFit: "cover",
+                                        height: "auto"
+                                    }}
+                                />
+                            </Carousel.Item>
+                            <Carousel.Item style={{ borderRadius: "12px", overflow: "hidden" }}>
+                                <img
+                                    className="d-block w-100"
+                                    src={quotesImg}
+                                    alt="Quotes management interface"
+                                    style={{
+                                        borderRadius: "12px",
+                                        display: "block",
+                                        objectFit: "cover",
+                                        height: "auto"
+                                    }}
+                                />
+                            </Carousel.Item>
+                        </Carousel>
+
                     </Col>
 
                     {/* Right: Header + 3 pointers */}
