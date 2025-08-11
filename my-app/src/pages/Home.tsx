@@ -30,13 +30,14 @@ const Home: React.FC = () => {
             {/* HERO SECTION */}
             <section 
                 className="border-bottom"
-                style={{
-                    minHeight: "95vh",
-                    display: "flex",
-                    alignItems: "flex-start",
-                    paddingTop: "10rem",
-                    paddingBottom: "3rem"
+                style={{ 
+                  minHeight: "95vh", 
+                  display: "flex", 
+                  alignItems: "center",
+                  justifyContent: "center",
+                  padding: "2rem 0"
                 }}
+
             >
                 <Container className="text-center">
                     {/* Fixed headline */}
