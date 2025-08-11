@@ -116,16 +116,15 @@ const Home: React.FC = () => {
                         className="fs-5 mb-3 mx-auto"
                         style={{ maxWidth: "800px", lineHeight: "1.7" }}
                     >
-                        Diploy is an AI native, in-one workspace and field
-                        service management platform designed for small
-                        businesses tired of juggling text threads, spreadsheets,
-                        or costly software. With Diploy, you get smart
+                        Diploy is an AI native, all-in-one workspace and field
+                        service management platform for small
+                        businesses. With Diploy, you get smart
                         scheduling, AI-powered quoting, automated dispatching,
-                        and lead generation — all built into one easy-to-use
-                        system optimized for your team and customers.
+                        and lead generation — built into one easy-to-use
+                        system.
                     </p>
                     <p
-                        className="fs-5 text-muted mx-auto"
+                        className="fs-5 text-muted mx-auto fw-bold"
                         style={{ maxWidth: "800px", lineHeight: "1.7" }}
                     >
                         Use just what you need. Pay for just what you use. Scale
