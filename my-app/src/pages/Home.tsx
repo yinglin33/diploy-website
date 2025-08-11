@@ -154,19 +154,6 @@ const Home: React.FC = () => {
                             <Carousel.Item style={{ borderRadius: "12px", overflow: "hidden" }}>
                                 <img
                                     className="d-block w-100"
-                                    src={jobsImg}
-                                    alt="Jobs management interface"
-                                    style={{
-                                        borderRadius: "12px",
-                                        display: "block",
-                                        objectFit: "cover",
-                                        height: "auto"
-                                    }}
-                                />
-                            </Carousel.Item>
-                            <Carousel.Item style={{ borderRadius: "12px", overflow: "hidden" }}>
-                                <img
-                                    className="d-block w-100"
                                     src={customersImg}
                                     alt="Customer management interface"
                                     style={{
@@ -182,6 +169,19 @@ const Home: React.FC = () => {
                                     className="d-block w-100"
                                     src={quotesImg}
                                     alt="Quotes management interface"
+                                    style={{
+                                        borderRadius: "12px",
+                                        display: "block",
+                                        objectFit: "cover",
+                                        height: "auto"
+                                    }}
+                                />
+                            </Carousel.Item>
+                            <Carousel.Item style={{ borderRadius: "12px", overflow: "hidden" }}>
+                                <img
+                                    className="d-block w-100"
+                                    src={jobsImg}
+                                    alt="Jobs management interface"
                                     style={{
                                         borderRadius: "12px",
                                         display: "block",
