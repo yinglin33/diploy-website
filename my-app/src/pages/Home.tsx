@@ -26,9 +26,18 @@ const Home: React.FC = () => {
         return () => clearInterval(interval)
     }, [])
     return (
-        <div style={{ backgroundColor: "#f8f9fa", paddingTop: "4rem" }}>
+        <div style={{ backgroundColor: "#f8f9fa" }}>
             {/* HERO SECTION */}
-            <section className="py-5 border-bottom">
+            <section
+                className="border-bottom"
+                style={{
+                    minHeight: "95vh",
+                    display: "flex",
+                    alignItems: "center",
+                    paddingTop: "6rem",
+                    paddingBottom: "3rem"
+                }}
+            >
                 <Container className="text-center">
                     {/* Fixed headline */}
                     <h1
@@ -306,38 +315,40 @@ const Home: React.FC = () => {
                     </h2>
                     <Row className="justify-content-center g-4">
                         <Col xs={12} md={5}>
-                            <Card className="h-100 shadow-sm border-0">
-                                <Card.Body className="p-4">
-                                    <Card.Title className="text-primary fs-4 mb-3">
-                                        Email
-                                    </Card.Title>
-                                    <Card.Text className="fs-5">
-                                        <a
-                                            href="mailto:sales@diploy.io"
-                                            className="text-decoration-none text-dark"
-                                        >
+                            <a
+                                href="mailto:sales@diploy.io"
+                                className="text-decoration-none"
+                                style={{ color: 'inherit' }}
+                            >
+                                <Card className="h-100 shadow-sm border-0" style={{ cursor: 'pointer' }}>
+                                    <Card.Body className="p-4">
+                                        <Card.Title className="text-primary fs-4 mb-3 fw-bold">
+                                            Email
+                                        </Card.Title>
+                                        <Card.Text className="fs-5 text-dark">
                                             sales@diploy.io
-                                        </a>
-                                    </Card.Text>
-                                </Card.Body>
-                            </Card>
+                                        </Card.Text>
+                                    </Card.Body>
+                                </Card>
+                            </a>
                         </Col>
                         <Col xs={12} md={5}>
-                            <Card className="h-100 shadow-sm border-0">
-                                <Card.Body className="p-4">
-                                    <Card.Title className="text-primary fs-4 mb-3">
-                                        Phone
-                                    </Card.Title>
-                                    <Card.Text className="fs-5">
-                                        <a
-                                            href="tel:+19097189852"
-                                            className="text-decoration-none text-dark"
-                                        >
+                            <a
+                                href="tel:+19097189852"
+                                className="text-decoration-none"
+                                style={{ color: 'inherit' }}
+                            >
+                                <Card className="h-100 shadow-sm border-0" style={{ cursor: 'pointer' }}>
+                                    <Card.Body className="p-4">
+                                        <Card.Title className="text-primary fs-4 mb-3 fw-bold">
+                                            Phone
+                                        </Card.Title>
+                                        <Card.Text className="fs-5 text-dark">
                                             +1 (909) 718-9852
-                                        </a>
-                                    </Card.Text>
-                                </Card.Body>
-                            </Card>
+                                        </Card.Text>
+                                    </Card.Body>
+                                </Card>
+                            </a>
                         </Col>
                     </Row>
                 </Container>
