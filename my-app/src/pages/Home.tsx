@@ -95,7 +95,7 @@ const Home: React.FC = () => {
                     <Button
                         variant="primary"
                         size="lg"
-                        href="#contact"
+                        href="https://calendly.com/admin-diploy/30min"
                         style={{ marginTop: "2rem" }}
                     >
                         Book a Demo
@@ -271,7 +271,7 @@ const Home: React.FC = () => {
             </Container>
 
             {/* BOOK A DEMO SECTION */}
-            <section className="py-5 border-bottom">
+            <section className="py-5 border-bottom" id="demo">
                 <Container className="text-center">
                     <h2 className="h3 fw-semibold text-secondary mb-4">
                         Ready to See Diploy in Action?
@@ -287,7 +287,7 @@ const Home: React.FC = () => {
                     <Button
                         variant="primary"
                         size="lg"
-                        href="https://calendly.com/yinglonglin/diploy-product-demo"
+                        href="https://calendly.com/admin-diploy/30min"
                         target="_blank"
                         rel="noopener noreferrer"
                     >

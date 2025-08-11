@@ -14,12 +14,12 @@ const Navbar = () => {
 
                 <div className={`navbar-menu ${isMenuOpen ? "is-open" : ""}`}>
                     <a
-                        href="https://calendly.com/yinglonglin/diploy-product-demo"
+                        href="#demo"
                         className="nav-link"
                     >
                         Book a Demo
                     </a>
-                    <a href="mailto:sales@diploy.io" className="nav-link">
+                    <a href="#contact" className="nav-link">
                         Contact
                     </a>
                 </div>

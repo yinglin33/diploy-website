@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
                         </div>
                         <div className="footer-links-content">
                             <div className="footer-section-content">
-                                <a href="https://calendly.com/yinglonglin/diploy-product-demo">
+                                <a href="https://calendly.com/admin-diploy/30min">
                                     Book Demo
                                 </a>
                             </div>
