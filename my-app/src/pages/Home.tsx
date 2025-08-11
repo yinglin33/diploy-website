@@ -2,6 +2,10 @@ import React, { useState, useEffect } from "react"
 import { Row, Col, Card, Button, Container } from "react-bootstrap"
 import { AnimatePresence, motion } from "framer-motion"
 import Logo from "../assets/logo.png"
+import jobsImg from "../assets/jobs.png"
+import customersImg from "../assets/customers.png"
+import quotesImg from "../assets/quotes.png"
+import { Carousel } from "react-bootstrap"
 
 const Home: React.FC = () => {
     const headlines = [
@@ -130,15 +134,36 @@ const Home: React.FC = () => {
                 <Row className="align-items-center">
                     {/* Left: Image */}
                     <Col md={6} className="mb-4 mb-md-0">
-                        <img
-                            src="https://via.placeholder.com/600x400?text=Your+Image+Here"
-                            alt="Feature Illustration"
-                            style={{
-                                width: "100%",
-                                borderRadius: "8px",
-                                objectFit: "cover",
-                            }}
-                        />
+                                            <Carousel className="my-4" style={{
+    maxWidth: "1200px",
+    margin: "0 auto",
+    outline: "5px solid #ccc",
+    outlineOffset: "6px",  // pushes border outward
+    borderRadius: "12px"
+  }}
+>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={jobsImg}
+      alt="First slide"
+    />
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={customersImg}
+      alt="Second slide"
+    />
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={quotesImg}
+      alt="Third slide"
+    />
+  </Carousel.Item>
+</Carousel>
                     </Col>
 
                     {/* Right: Header + 3 pointers */}
