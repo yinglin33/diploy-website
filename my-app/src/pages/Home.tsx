@@ -39,7 +39,7 @@ const Home: React.FC = () => {
                 }}
 
             >
-                <Container className="text-center">
+                <Container className="text-center" style={{ transform: "translateY(-1rem)" }}>
                     {/* Fixed headline */}
                     <h1
                         className="fw-bold mb-4"
@@ -89,8 +89,8 @@ const Home: React.FC = () => {
                         }}
                     >
                         Diploy:{" "}
-                        <b> Your Copilot for Field Service Management </b> —
-                        from scheduling to AI-powered team management.
+                        <b  style={{ textDecoration: "underline" }}> Your Copilot for Field Service Management </b> —
+                        from quoting & scheduling to AI-powered team management.
                     </p>
 
                     <Button
